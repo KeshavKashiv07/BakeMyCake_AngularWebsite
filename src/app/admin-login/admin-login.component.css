@@ -1,0 +1,19 @@
+#login-form {   
+    margin-top: 40px;
+    margin-left: 10px;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 120%;
+    margin: 0px;
+    color: rgb(103,58,183);
+}
+
+.Input{
+    width: 15%;
+    margin-right: 10px;    
+}
+
+section {
+    margin-top: 90px;
+}

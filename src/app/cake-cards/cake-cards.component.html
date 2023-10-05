@@ -1,0 +1,14 @@
+
+<mat-card class="cake-card">
+    <img mat-card-image src="../../assets/{{product.image}}">
+    <mat-card-header>
+        <mat-card-title class="cake-title">{{product.itemName}} </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-card-subtitle class="fs-6">₹ {{product.price}}.00</mat-card-subtitle>        
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="btn BuyNow" type="button" routerLink="../OrderView/{{product.id}}">Buy Now</button>
+    </mat-card-actions>
+    <h4>{{product.category}}</h4>
+</mat-card>

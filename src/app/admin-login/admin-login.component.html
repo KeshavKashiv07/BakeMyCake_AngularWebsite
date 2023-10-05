@@ -1,0 +1,17 @@
+<section class="text-center">
+    <div id="login-form">
+        <h1>If you are a Administration, enter your Security Code</h1><br>
+        
+        <mat-form-field  class="Input" appearance="fill">
+            <mat-label>Enter Code</mat-label>
+            <input matInput name="code" [(ngModel)]="code" type="password" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="validateAdminCode()">login</button>
+    </div>
+    <h1 >If you are a User, <a routerLink="/home" class="fw-light">click here</a></h1>
+</section>
+
+<app-footer class="position-fixed bottom-0 w-100"></app-footer>
+
+
+

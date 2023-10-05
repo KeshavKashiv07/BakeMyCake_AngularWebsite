@@ -1,0 +1,20 @@
+export type CustomerOrder = {
+     name?:string,
+     category?:string,
+     gander?:string,
+     email?:string,
+     phoneNo?:number,
+     alternatePhoneNo?:number,
+     street?:string,
+     landMark?:string,
+     city?:string,
+     state?:string,
+     zip?:number,
+     weight?:string, 
+     itemName?:string,
+     quantity?:number,              
+     amount?:number, 
+     deliveryDate?:string, 
+     paymentMode?:string,
+     totalAmount?:number                
+}

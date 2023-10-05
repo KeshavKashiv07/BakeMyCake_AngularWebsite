@@ -1,0 +1,29 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+    margin-right: 40px;
+}
+.filterCategory{
+    text-align: right;
+    position: relative;
+    bottom: 55px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+mat-label{
+    color: brown;
+}
+app-search{
+    position: relative;
+    bottom: 30px;
+}
+
+#notFoundMsg {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20%;
+    margin-top: 50px;
+    
+}
+

@@ -1,0 +1,58 @@
+img{
+    width: 600px;
+    height: 600px;
+    border-radius: 15px;
+}
+.category{
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    color: rgb(239,93,114);
+    font-size: 400%;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 90px;
+}
+
+h1{
+    font-weight: 500;
+}
+.star{
+   color: rgb(184,25,48);
+}
+.Ingredients{
+    color: green;
+}
+h2{
+    color: black;
+}
+span{
+    color: green;
+    font-size: 150%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nameInput {
+    width: 82%;
+}
+.phoneInput {
+    width: 40%;
+}
+.Email {
+    width: 82%;
+}
+.addresInput{
+    width: 40%;
+}
+.defaultDetails{
+    width: 27%;
+}
+.orderDetails{
+    width: 40%;
+}
+
+.adds{
+    color: rgb(184,25,48) ;
+}
+
+
+

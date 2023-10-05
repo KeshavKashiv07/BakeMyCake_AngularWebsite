@@ -1,0 +1,67 @@
+.cake-card {
+    width: 310px;
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 530px;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+img {
+    height: 300px;
+}
+
+.cake-details {
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    letter-spacing: .25px;
+    font-weight: 500;
+    font-size: 1.15em;
+    -webkit-line-clamp: 2;
+}
+
+.cake-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BuyNow {
+    background-color: rgb(184,25,48) ;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+}
+
+.discount {    
+    color: green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+p{
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+span {
+    color: rgb(239,93,114);
+}
+
+h4{
+    background-color:rgb(239,93,114);
+    width: 30%;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 33%;
+}

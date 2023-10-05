@@ -1,0 +1,17 @@
+<div class="filterCategory">  
+  <mat-form-field appearance="fill"> 
+    <mat-label>Choose Category</mat-label>
+    <mat-select (ngModelChange)="filterByCategory($event)" name="filterCategory" [(ngModel)]="filterCategory" name="filterCategory">
+      <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<app-search class="mt-0" (searchTextChanged)="onSearchTextChanged($event)"></app-search>
+
+<div class="cards">
+  <app-cake-cards *ngFor="let product of products" [product]="product"></app-cake-cards>
+</div>
+
+<!-- <div id="notFoundMsg"></div> -->
+

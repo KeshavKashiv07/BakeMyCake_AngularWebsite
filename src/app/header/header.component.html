@@ -1,0 +1,8 @@
+<div class="header">
+     <h1 class="ps-1 fs-3">{{title}}</h1>
+
+    <div>
+        <a *ngIf="loggedIn!==true" routerLink="/" (click)="goAdminView()"> <button mat-icon-button> <mat-icon class="icon mb-2">home</mat-icon></button></a>
+        <a routerLink="admin-login"> <button mat-icon-button>  <mat-icon class="icon mb-2">person</mat-icon> </button> </a>   
+    </div>        
+</div>

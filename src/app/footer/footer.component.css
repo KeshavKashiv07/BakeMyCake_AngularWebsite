@@ -1,0 +1,13 @@
+img{
+    height:18px;
+    width:18px;
+    margin: 7px;
+}
+
+footer {
+text-align: center;
+color: white;
+background-color: rgb(41, 40, 40);
+padding: 5px;
+margin-bottom: 5px;
+}

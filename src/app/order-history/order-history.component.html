@@ -1,0 +1,91 @@
+<h1>Order Requests</h1>
+
+<!-- Filter input  -->
+<div class="searchBox row" >
+
+  <div id="search" class="col-lg-3">
+    <input class="searchText" type="text" placeholder="Search..." (keyup)="applyFilter($event)">
+  </div> 
+
+  <section class="dateRange col-lg-4">
+    <mat-form-field>
+      <mat-label class="dateRangeInput">Enter a date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker" [max]="maxDate">
+        <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+        <input matEndDate  placeholder="End date" [(ngModel)]="endDate" (ngModelChange)="filterByDateRange()">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+    <button mat-stroked-button class="cancel m-1" type="reset" (click)="resetDate()">Cancel</button>
+  </section>
+
+</div>
+
+<section id="Order-History" class="">
+    <table mat-table [dataSource]="orderHistory" class="mat-elevation-z8 tables"  matSort (matSortChange)="sortChange($event)">
+      
+        <!-- Date Column -->
+        <ng-container matColumnDef="deliveryDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by date">Date</th>
+          <td mat-cell *matCellDef="let element"> {{element.deliveryDate}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+      
+        <!-- Phone Column -->
+        <ng-container matColumnDef="phoneNo">
+            <th mat-header-cell *matHeaderCellDef> Phone </th>
+            <td mat-cell *matCellDef="let element"> {{element.phoneNo}} </td>
+        </ng-container>
+        
+        <!-- Item Name Column -->
+        <ng-container matColumnDef="itemName">
+            <th mat-header-cell *matHeaderCellDef> Item Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.itemName}} </td>
+        </ng-container>
+        
+        <!-- Tota Amount Column -->
+        <ng-container matColumnDef="totalAmount">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by totalAmount">Total Amount </th>
+            <td mat-cell *matCellDef="let element">₹ {{element.totalAmount}}</td>
+        </ng-container>
+
+        <!-- Category Column -->
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef> Category </th>
+          <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+        </ng-container>
+        
+        <!-- City Column -->
+        <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef> City </th>
+          <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+        </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" #paginator showFirstLastButtons> </mat-paginator>
+  </section>
+
+  <div class="logout">
+    <button mat-fab type="button" *ngIf="loggedIn!==true" routerLink="/" (click)="logoutUser()" class="buttons"> <mat-icon>logout</mat-icon> </button>
+  </div>
+
+
+  <app-footer class="position-fixed bottom-0 w-100"></app-footer>
+
+
+

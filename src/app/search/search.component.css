@@ -1,0 +1,18 @@
+.searchText{
+    width: 200%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(241,241,241);
+    border-color: rgb(184,25,48);
+    font-size: medium;
+}
+
+button {
+    margin-left: 160px;
+    color: rgb(184,25,48);
+}
+
+.searchBox{
+    display: flex;
+    justify-content: center;
+}
